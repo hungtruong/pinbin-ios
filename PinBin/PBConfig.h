@@ -1,0 +1,1 @@
+#define PinBinURL @"http://your-pinbin-url-here.com/"

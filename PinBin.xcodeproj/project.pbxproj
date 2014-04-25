@@ -22,6 +22,7 @@
 		19E05D3419043FB0005275DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E05D1319043FB0005275DD /* UIKit.framework */; };
 		19E05D3C19043FB0005275DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19E05D3A19043FB0005275DD /* InfoPlist.strings */; };
 		19E05D3E19043FB0005275DD /* PinBinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E05D3D19043FB0005275DD /* PinBinTests.m */; };
+		19E05D4919044024005275DD /* PBLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E05D4819044024005275DD /* PBLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,9 @@
 		19E05D3919043FB0005275DD /* PinBinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PinBinTests-Info.plist"; sourceTree = "<group>"; };
 		19E05D3B19043FB0005275DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19E05D3D19043FB0005275DD /* PinBinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinBinTests.m; sourceTree = "<group>"; };
+		19E05D4719044024005275DD /* PBLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBLocationManager.h; sourceTree = "<group>"; };
+		19E05D4819044024005275DD /* PBLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLocationManager.m; sourceTree = "<group>"; };
+		19E05D4A190441E4005275DD /* PBConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBConfig.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +124,11 @@
 				19E05D2419043FB0005275DD /* Main_iPad.storyboard */,
 				19E05D2719043FB0005275DD /* PBViewController.h */,
 				19E05D2819043FB0005275DD /* PBViewController.m */,
+				19E05D4719044024005275DD /* PBLocationManager.h */,
+				19E05D4819044024005275DD /* PBLocationManager.m */,
 				19E05D2A19043FB0005275DD /* Images.xcassets */,
 				19E05D1619043FB0005275DD /* Supporting Files */,
+				19E05D4A190441E4005275DD /* PBConfig.h */,
 			);
 			path = PinBin;
 			sourceTree = "<group>";
@@ -203,6 +210,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Hung Truong";
 				TargetAttributes = {
+					19E05D0B19043FB0005275DD = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					19E05D2F19043FB0005275DD = {
 						TestTargetID = 19E05D0B19043FB0005275DD;
 					};
@@ -254,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E05D4919044024005275DD /* PBLocationManager.m in Sources */,
 				19E05D2019043FB0005275DD /* PBAppDelegate.m in Sources */,
 				19E05D2919043FB0005275DD /* PBViewController.m in Sources */,
 				19E05D1C19043FB0005275DD /* main.m in Sources */,

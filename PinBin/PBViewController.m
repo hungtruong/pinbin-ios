@@ -7,7 +7,7 @@
 //
 
 #import "PBViewController.h"
-
+#import "PBLocationManager.h"
 @interface PBViewController ()
 
 @end
@@ -24,6 +24,30 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+  [self setUpViews];
+}
+
+- (void)setUpViews
+{
+  if ([[PBLocationManager sharedManager] locationServicesEnabled]) {
+    [self.label setText:@"Location services are on"];
+    [self.button setTitle:@"Turn location services off" forState:UIControlStateNormal];
+  }
+  else
+  {
+    [self.label setText:@"Location services are off"];
+    [self.button setTitle:@"Turn location services on" forState:UIControlStateNormal];
+  }
+}
+
+-(void)buttonPressed:(id)sender
+{
+  [[PBLocationManager sharedManager] toggleServiceOn];
+  [self setUpViews];
 }
 
 @end

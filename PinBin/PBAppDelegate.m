@@ -7,12 +7,15 @@
 //
 
 #import "PBAppDelegate.h"
-
+#import "PBLocationManager.h"
 @implementation PBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+  
+  //start location services
+  [PBLocationManager sharedManager];
     return YES;
 }
 							
